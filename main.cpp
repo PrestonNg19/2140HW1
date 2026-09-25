@@ -1,8 +1,8 @@
-/*
- * Full Name:     [Your Name]
- * Student ID:    [Your NUID]
+    /*
+ * Full Name:     [Preston Ng]
+ * Student ID:    [002096670]
  * Course:        EECE 2140 - Computing Fundamentals for Engineers
- * Section:       [Your Section]
+ * Section:       [05]
  * Semester:      Fall 2026
  * Assignment:    Homework 1 - Quiz Grade Analyzer
  * Compilation:   g++ -std=c++11 main.cpp -o main
@@ -13,8 +13,63 @@
 
 #include <iostream>
 
-int main()
-{
+int main(){
+    double count = 0;
+    double sum = 0;
+    int minimum = 101;
+    int maximum = -1;
+    int score = 0;
+     double average = 0;
+    char letterGrade;
+    const double A_CUTOFF = 90;
+    const double B_CUTOFF = 80;
+    const double C_CUTOFF = 70;
+    const double D_CUTOFF = 60;
+
+
+    std::cout << "Enter quiz scores (Ctrl+D / Ctrl+Z to end):";
+    while (std::cin >> score){
+        sum += score;
+        count++;
+        if (score < minimum){
+            minimum = score;
+            }
+            if (score > maximum){
+                maximum = score;
+            }
+            }
+    if (count == 0){
+    std::cout << "No scores were entered.";
+    return 0;
+        }
+        
+    average = sum/count;
+    if (average >= A_CUTOFF){
+        letterGrade = 'A';
+    }else if(average >= B_CUTOFF){
+        letterGrade = 'B';
+}else if(average >= C_CUTOFF){
+        letterGrade = 'C';
+}else if(average >= D_CUTOFF){
+        letterGrade = 'D';
+}else {
+        letterGrade = 'F';}
+
+        
+    
+std::cout << " --- Quiz Summary --- "<<std::endl;
+std::cout << "Scores entered: "<<count<< std::endl;
+std::cout << "Sum: "<<sum<< std::endl;
+std::cout << "Minimum: "<<minimum<< std::endl;
+std::cout << "Maximum: "<<maximum<< std::endl;
+std::cout << "Average: "<<average<< std::endl;
+std::cout << "Letter Grade: "<<letterGrade<< std::endl;
+
+    }
+
+
+        
+
     // TODO 1: Declare and initialize the variables you will need to keep
     //         a running count, sum, minimum, and maximum of the scores
     //         entered so far. Give each one a starting value that will
@@ -52,5 +107,5 @@ int main()
     //         Average: <average>
     //         Letter grade: <letter>
 
-    return 0;
-}
+
+
