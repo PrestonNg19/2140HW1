@@ -63,7 +63,7 @@ std::cout << "Sum: "<<sum<< std::endl;
 std::cout << "Minimum: "<<minimum<< std::endl;
 std::cout << "Maximum: "<<maximum<< std::endl;
 std::cout << "Average: "<<average<< std::endl;
-std::cout << "Letter Grade: "<<letterGrade<< std::endl;
+std::cout << "Letter grade: "<<letterGrade<< std::endl;
 
     }
 
